@@ -1,0 +1,31 @@
+/* imports */
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap");
+/* resets */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* properties/variables */
+:root {
+  --main-font: "Signika Negative", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 4fr;
+  font-family: var(--main-font);
+}
+
+body > * {
+  border: 1px solid red;
+}
+
+.sidebar__nav {
+  grid-row: 1 / 3;
+}
