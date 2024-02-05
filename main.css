@@ -16,7 +16,7 @@
   /* text colors */
   --white-text-color: #fff;
   --black-text-color: #020617;
-  --gray-text-color: #a1a1aa;
+  --gray-text-color: #7b7b81;
 
   /* colors */
   --blue-background: #0ea5e9;
@@ -205,7 +205,7 @@ body {
   height: 100%;
   grid-template-columns: 3fr 1fr;
   gap: 8px;
-  padding: 8px 8px 8px 32px;
+  padding: 16px 8px 8px 32px;
   background-color: var(--light-backgroud);
 }
 
@@ -226,7 +226,40 @@ body {
 
 .project {
   height: 200px;
+  display: grid;
+  grid-template-rows: 20px 4fr 1fr;
+  gap: 8px;
+  padding: 16px;
   border-left: 8px solid var(--highlights);
+}
+
+.project h4 {
+  font-size: 20px;
+}
+
+.project p {
+  font-size: 14px;
+  color: var(--gray-text-color);
+}
+
+.project-buttons {
+  text-align: right;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: fit-content;
+  margin-left: auto;
+  gap: 30px;
+}
+
+.project-buttons svg {
+  height: 24px;
+  width: 24px;
+  transition: transform 0.3s;
+}
+
+.project-buttons svg:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .card {
@@ -238,7 +271,7 @@ body {
 .main__extras {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
-  gap: 8px;
+  gap: 16px;
 }
 
 .extra-announcement,
@@ -249,4 +282,51 @@ body {
 
 .card-extra {
   height: 300px;
+  padding: 24px;
+}
+
+.extra-announcement .card-extra {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.announcement-title {
+  font-weight: 600;
+}
+
+.announcement-content {
+  font-size: 12px;
+  color: var(--gray-text-color);
+}
+
+.extra-announcement .card-extra > .announcement:nth-child(1) {
+  border-bottom: 1px solid var(--black-text-color);
+}
+
+.extra-announcement .card-extra > .announcement:nth-child(2) {
+  border-bottom: 1px solid var(--black-text-color);
+}
+
+.extra-trending .card-extra {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.trending-user {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 8px;
+  align-items: center;
+}
+
+.trending-user img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.bio {
+  font-size: 12px;
+  color: var(--gray-text-color);
 }
