@@ -72,6 +72,7 @@ body {
 .links p {
   font-size: 20px;
   font-weight: 500;
+  transition: transform 0.2s;
 }
 
 .link-icons {
@@ -83,7 +84,120 @@ body {
 /* header styles */
 .header__nav {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  padding: 8px 32px;
+  gap: 4px;
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+}
+
+.header__top {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 48px;
+}
+
+.header-search {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 8px;
+  align-items: center;
+}
+
+.header-search input {
+  height: 32px;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--gray-background);
+  padding: 4px 8px;
+  outline: none;
+}
+
+.header-search svg {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.header-search svg:hover {
+  transform: scale(1.05);
+}
+
+.header-extras {
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr;
+  align-items: center;
+}
+
+.header-search svg,
+.header-extras svg {
+  height: 24px;
+  width: 24px;
+}
+
+.header-extras img {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+}
+
+.header-extras p {
+  font-size: 20px;
+}
+
+.header-extras > * {
+  transition: transform 0.2s;
+}
+
+.header-extras > *:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.header__bot {
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+}
+
+.header__bot img {
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+}
+
+.header-user-display {
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-intro p {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.header-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 8px;
+  margin-right: 32px;
+}
+
+.header-buttons button {
+  height: fit-content;
+  width: 100px;
+  font-size: 16px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 32px;
+  color: var(--white-text-color);
+  background-color: var(--blue-background);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.header-buttons button:hover {
+  transform: scale(1.05);
 }
 
 /* main section styles */
